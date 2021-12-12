@@ -1,0 +1,137 @@
+body{
+background-color: #EAD7D1;
+}
+
+h4{
+  line-height: 1em;
+}
+.type{
+  margin-left: 10px;
+  padding: 0 1em;
+  border-radius: 25px;
+  font-size: 1.5em;
+}
+
+.container{
+  margin-top: 4em;
+  text-align: center;
+}
+
+.description{
+  line-height: 150%;
+}
+
+.pokemonInfo{
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 1em;
+  width: 50%;
+  background-color: #edebe6;
+}
+
+.pokemonID{
+  font-size: 1.5em;
+  display: flex;
+  padding-top: 2em;
+  margin-right: 2em;
+  justify-content: end;
+}
+
+.pokemonName{
+  font-size: 2em;
+  text-transform: capitalize;
+}
+
+.measurements{
+  padding-bottom: 1em;
+}
+
+.buttons{
+  margin-top: 0.5em;
+}
+
+.buttons button{
+  margin-left:1em;
+}
+
+img{
+  height: 10em;
+  width: 10em;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Only type colour configurations below */
+
+.pokemonTypebug{
+  background-color: #C6D16E;
+}
+
+.pokemonTypedragon{
+  background-color: #A27DFA;
+}
+
+.pokemonTypefairy{
+  background-color: #F4BDC9;
+}
+
+.pokemonTypefire{
+  background-color: #F5AC78;
+}
+
+.pokemonTypeghost{
+  background-color: #A292BC;
+}
+
+.pokemonTypeground{
+  background-color: #EBD69D;
+}
+
+.pokemonTypenormal{
+  background-color: #C6C6A7;
+}
+
+.pokemonTypepsychic{
+  background-color: #FA92B2;
+}
+
+.pokemonTypesteel{
+  background-color: #D1D1E0;
+}
+
+.pokemonTypedark{
+  color: #f1f1ebf1;
+  background-color: #707070;
+}
+
+.pokemonTypeelectric{
+  background-color: #FAE078;
+}
+
+.pokemonTypefighting{
+  background-color: #D67873;
+}
+
+.pokemonTypeflying{
+  background-color: #C6B7F5;
+}
+
+.pokemonTypegrass{
+  background-color: #A7DB8D;
+}
+
+.pokemonTypeice{
+  background-color: #BCE6E6;
+}
+
+.pokemonTypepoison{
+  background-color: #C183C1;
+}
+
+.pokemonTyperock{
+  background-color: #D1C17D;
+}
+
+.pokemonTypewater{
+  background-color: #9DB7F5;
+}
