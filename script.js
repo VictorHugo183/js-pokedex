@@ -13,7 +13,8 @@ function inputLength(){
 
 //when a user presses enter while interacting with the textbox
 const inputSearch = async function(event) {
-  if (inputLength() > 0 && event.keyCode === 13) {
+  if (inputLength() > 1 && event.keyCode === 13) {
+    this.blur();
     let value = input.value.toLowerCase();
     try {
       const response = await fetch(`${baseUrl}${value}`);
@@ -24,12 +25,13 @@ const inputSearch = async function(event) {
     }
     catch {
       alert("Invalid name, you must search by the Pokemon's full name ie. pikachu");
+      input.value = "";
     }
   }
 }
 
 const buttonSearch = async function(){
-  if(inputLength() > 0){
+  if(inputLength() > 1){
     let value = input.value.toLowerCase();
     try{
       const response = await fetch(`${baseUrl}${value}`);
@@ -40,6 +42,7 @@ const buttonSearch = async function(){
     }
     catch{
       alert("Invalid name, you must search by the Pokemon's full name ie. pikachu");
+      input.value = "";
     }
   }
 }
