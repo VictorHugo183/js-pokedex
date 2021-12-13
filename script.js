@@ -14,7 +14,7 @@ function inputLength(){
 //when a user presses enter while interacting with the textbox
 const inputSearch = async function(event) {
   if (inputLength() > 1 && event.keyCode === 13) {
-    this.blur();
+    this.blur(); //deselect targeted element
     let value = input.value.toLowerCase();
     try {
       const response = await fetch(`${baseUrl}${value}`);
@@ -218,8 +218,8 @@ const getFirstEntry = async function () {
       const additionalData = await response2.json();
       createPokemon(data, additionalData);
     }
-    catch {
-      console.log(e,"error fetching initial entry");
+    catch(e) {
+      console.log("error fetching initial entry: ", e);
     }
 }
 getFirstEntry();
