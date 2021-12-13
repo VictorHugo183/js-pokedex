@@ -83,12 +83,20 @@ const createPokemon = (data, additionalData) => {
   let image = document.createElement("img");
   image.src = `${data.sprites.front_default}`;
   image.classList.add("pokemonImage");
-  //adding display shiny on hover functionality:
-  image.addEventListener("mouseover", function(){
+  //display shiny on hover (not ideal for mobile):
+/*   image.addEventListener("mouseenter", function(){
     this.src =`${data.sprites.front_shiny}`;
   })
   image.addEventListener("mouseout", function () {
     this.src = `${data.sprites.front_default}`;
+  }) */
+  //toggle shiny form on click:
+  image.addEventListener("click", function(){
+    if (this.src === `${data.sprites.front_default}`){
+      this.src = `${data.sprites.front_shiny}`;
+    } else {
+      this.src = `${data.sprites.front_default}`;
+    }
   })
   pokemonInfo.appendChild(image);
 
@@ -200,6 +208,21 @@ const getNext = async function () {
     }
   }
 }
+
+/* Run this function on page load to display the first pokedex entry */
+const getFirstEntry = async function () {
+    try {
+      const response = await fetch(`${baseUrl}1`);
+      const data = await response.json();
+      const response2 = await fetch(data.species.url);
+      const additionalData = await response2.json();
+      createPokemon(data, additionalData);
+    }
+    catch {
+      console.log(e,"error fetching initial entry");
+    }
+}
+getFirstEntry();
 
 input.addEventListener("keypress", inputSearch);
 searchButton.addEventListener("click", buttonSearch);

@@ -7,4 +7,4 @@ This website uses asynchronous Javascript to fetch data from an external API,
 it then displays that data using DOM manipulation.
 
 This was made to get more practice working with direct DOM manipulation, handling
-promises and manipulating JSON data.
+promises and JSON data.
