@@ -1,13 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap');
+
 body{
-background-color: #EAD7D1;
+background-color: /* #EAD7D1; */ #CCCFD8;
+font-family: 'Poppins', sans-serif;
+color: #17191E;
+}
+
+h1{
+  font-family: 'Roboto Slab', serif;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 h4{
   line-height: 1em;
 }
+
 /* 16px font in text input might prevent the zooming in on it on mobile */
 input[type=text]{
   font-size: max(1em, 16px);
+  height: 1.5rem;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  border-radius: 10px;
+  background: #272A33;
+  padding: 10px 16px;
+  color: #eee;
+  cursor: pointer;
 }
 
 .type{
@@ -31,7 +56,7 @@ input[type=text]{
   margin: auto;
   margin-top: 1em;
   width: 50%;
-  background-color: #edebe6;
+  background-color: /* #edebe6; */ #DDDFE5;
 }
 
 .pokemonID{
@@ -67,7 +92,7 @@ img{
   cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .pokemonInfo {
     width: auto;
   }

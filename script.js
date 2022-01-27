@@ -163,7 +163,7 @@ const createPokemon = (data, additionalData) => {
   prevButton.addEventListener("click", getPrevious);
 
   let nextButton = document.createElement("button");
-  nextButton.textContent = `next`;
+  nextButton.textContent = `Next`;
   nextButton.addEventListener("click", getNext);
 
   lowerButtonsContainer.appendChild(prevButton);
